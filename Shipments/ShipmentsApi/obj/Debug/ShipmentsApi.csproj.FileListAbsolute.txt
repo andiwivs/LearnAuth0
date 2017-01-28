@@ -48,3 +48,4 @@ C:\Work\Repos\LearnAuth0\Shipments\ShipmentsApi\obj\Debug\ShipmentsApi.csprojRes
 C:\Work\Repos\LearnAuth0\Shipments\ShipmentsApi\obj\Debug\ShipmentsApi.dll
 C:\Work\Repos\LearnAuth0\Shipments\ShipmentsApi\obj\Debug\ShipmentsApi.pdb
 C:\Work\Repos\LearnAuth0\Shipments\ShipmentsApi\bin\System.IdentityModel.Tokens.Jwt.pdb
+C:\Work\Repos\LearnAuth0\Shipments\ShipmentsApi\bin\JWT.dll

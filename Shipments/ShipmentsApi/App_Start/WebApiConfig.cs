@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using ShipmentsApi.App_Start;
+using System.Web.Configuration;
+using System.Web.Http;
 
 namespace ShipmentsApi
 {
@@ -12,6 +14,13 @@ namespace ShipmentsApi
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional });
+
+            config.MessageHandlers.Add(new JsonWebTokenValidationHandler()
+            {
+                Audience = WebConfigurationManager.AppSettings["auth0:ClientId"],
+                SymmetricKey = WebConfigurationManager.AppSettings["auth0:ClientSecret"],
+                IsSecretBase64Encoded = false
+            });
         }
     }
 }
