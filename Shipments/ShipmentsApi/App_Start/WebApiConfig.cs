@@ -1,4 +1,5 @@
-﻿using ShipmentsApi.App_Start;
+﻿using Newtonsoft.Json.Serialization;
+using ShipmentsApi.App_Start;
 using System.Web.Configuration;
 using System.Web.Http;
 
@@ -21,6 +22,9 @@ namespace ShipmentsApi
                 SymmetricKey = WebConfigurationManager.AppSettings["auth0:ClientSecret"],
                 IsSecretBase64Encoded = false
             });
+
+            var jsonFormatter = config.Formatters.JsonFormatter;
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }
     }
 }

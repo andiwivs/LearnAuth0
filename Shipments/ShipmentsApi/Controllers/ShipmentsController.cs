@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using ShipmentsApi.Models;
+using System.Web.Http;
 
 namespace ShipmentsApi.Controllers
 {
@@ -7,7 +8,7 @@ namespace ShipmentsApi.Controllers
     {
         public IHttpActionResult Get()
         {
-            return Ok();
+            return Ok(Shipment.Create());
         }
     }
 }
